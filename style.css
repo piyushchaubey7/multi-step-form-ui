@@ -1,0 +1,139 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+}
+
+.container {
+  display: flex;
+  width: 900px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.sidebar {
+  width: 250px;
+  position: relative;
+  background: url('img/1.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.step,
+.step .circle,
+.label {
+  position: relative;
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step .circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+}
+
+.step.active .circle {
+  background-color: white;
+  color: #483EFF;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.label small {
+  font-size: 10px;
+}
+
+.label span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Form Panel */
+.form-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.step-panel {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-panel.active {
+  display: flex;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #03225c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

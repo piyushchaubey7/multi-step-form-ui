@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-Step Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="step active">
+        <div class="circle">1</div>
+        <div class="label">
+          <small>STEP 1</small>
+          <span>YOUR INFO</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">2</div>
+        <div class="label">
+          <small>STEP 2</small>
+          <span>SELECT PLAN</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">3</div>
+        <div class="label">
+          <small>STEP 3</small>
+          <span>ADD-ONS</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">4</div>
+        <div class="label">
+          <small>STEP 4</small>
+          <span>SUMMARY</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Content -->
+    <form class="form-content" id="multiStepForm">
+      <div class="step-panel active">
+        <h2>Personal Info</h2>
+        <p>Please provide your name, email address, and phone number.</p>
+        <label>Name <input type="text" required placeholder="e.g. Stephen King"></label>
+        <label>Email <input type="email" required placeholder="e.g. stephenking@lorem.com"></label>
+        <label>Phone <input type="tel" required placeholder="e.g. +1 234 567 890"></label>
+        <div class="buttons">
+          <button type="button" class="next-btn">Next Step</button>
+        </div>
+      </div>
+
+      <div class="step-panel">
+        <h2>Select Plan</h2>
+        <p>Choose your preferred plan.</p>
+        <label><input type="radio" name="plan"> Basic</label>
+        <label><input type="radio" name="plan"> Premium</label>
+        <div class="buttons">
+          <button type="button" class="prev-btn">Back</button>
+          <button type="button" class="next-btn">Next Step</button>
+        </div>
+      </div>
+
+      <div class="step-panel">
+        <h2>Add-Ons</h2>
+        <p>Select extra services.</p>
+        <label><input type="checkbox"> Online Support</label>
+        <label><input type="checkbox"> Extra Storage</label>
+        <div class="buttons">
+          <button type="button" class="prev-btn">Back</button>
+          <button type="button" class="next-btn">Next Step</button>
+        </div>
+      </div>
+
+      <div class="step-panel">
+        <h2>Summary</h2>
+        <p>Review your selections.</p>
+        <div class="buttons">
+          <button type="button" class="prev-btn">Back</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
