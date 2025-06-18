@@ -22,7 +22,7 @@ body {
 .sidebar {
   width: 250px;
   position: relative;
-  background: url('img/1.jpg') no-repeat center center;
+  background: url('1.jpg') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 30px 20px;
